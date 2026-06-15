@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers at Eximius Power & Energy | EPE Job Board</title>
+  <meta name="description" content="Join EPE, Sri Lanka's leading solar engineering contractor. Explore open positions for solar engineers and grid technicians.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Web Component Header -->
+  <site-header></site-header>
+
+  <main>
+    <!-- Page Banner -->
+    <div class="page-banner">
+      <div class="container">
+        <h1 class="page-banner-title">Join Our Engineering Team</h1>
+        <ul class="breadcrumbs">
+          <li><a href="index.html">Home</a></li>
+          <li>Careers</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Career Opportunities Segment -->
+    <section class="container" style="padding: 60px 0;">
+      <div class="grid-2 reveal" style="align-items: flex-start; gap: 50px;">
+        
+        <!-- Left: Open Positions list -->
+        <div>
+          <div class="cyber-badge">Future Talent</div>
+          <h2>Open Positions</h2>
+          <p style="margin-bottom: 30px;">
+            At Eximius Power & Energy, we are engineering solutions to shift Sri Lanka toward a decentralized, carbon-free future. We are seeking professionals eager to work with Tier-1 partners.
+          </p>
+
+          <div class="cyber-card" style="padding: 10px 30px;">
+            
+            <!-- Job 1 -->
+            <div class="job-item">
+              <div class="job-info">
+                <h3 class="job-title">Lead Solar Design Engineer</h3>
+                <div class="job-meta">
+                  <span>Colombo HQ</span>
+                  <span>Full-Time</span>
+                  <span>3+ Years Exp</span>
+                </div>
+              </div>
+              <p style="font-size: 0.85rem; margin: 10px 0 0; max-width: 400px;">
+                Experience with PVsyst, AutoCAD, solar layout shading analysis, and SLSEA compliance parameters required.
+              </p>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="job-item">
+              <div class="job-info">
+                <h3 class="job-title">Electrical Grid Technician</h3>
+                <div class="job-meta">
+                  <span>Field Operations</span>
+                  <span>Full-Time</span>
+                  <span>2+ Years Exp</span>
+                </div>
+              </div>
+              <p style="font-size: 0.85rem; margin: 10px 0 0; max-width: 400px;">
+                Expertise in DC/AC cabling, switchgear installation, grounding audits, and CEB grid code compliance.
+              </p>
+            </div>
+
+            <!-- Job 3 -->
+            <div class="job-item">
+              <div class="job-info">
+                <h3 class="job-title">O&M Support Supervisor</h3>
+                <div class="job-meta">
+                  <span>Colombo HQ</span>
+                  <span>Full-Time</span>
+                  <span>1+ Years Exp</span>
+                </div>
+              </div>
+              <p style="font-size: 0.85rem; margin: 10px 0 0; max-width: 400px;">
+                Manage cloud monitoring networks, run automated string curve tests, and coordinate site repair tickets.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Apply Form -->
+        <div>
+          <div class="cyber-card">
+            <h3 style="margin-bottom: 25px; font-size: 1.3rem;">Submit Your Profile</h3>
+            <form class="cyber-form" onsubmit="submitStaticForm(event, 'Your application has been safely received. The HR compliance division will contact you for a technical review shortly.')">
+              
+              <div class="form-group">
+                <label class="form-label" for="appName">Full Name *</label>
+                <input type="text" id="appName" class="form-control" placeholder="e.g. Ruwan Perera" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="appEmail">Email Address *</label>
+                  <input type="email" id="appEmail" class="form-control" placeholder="name@domain.com" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="appPhone">Phone Number *</label>
+                  <input type="tel" id="appPhone" class="form-control" placeholder="+94 XX XXX XXXX" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="appPosition">Target Position *</label>
+                <select id="appPosition" class="form-control" required style="background: var(--bg-dark);">
+                  <option value="" disabled selected>Select position...</option>
+                  <option value="engineer">Lead Solar Design Engineer</option>
+                  <option value="technician">Electrical Grid Technician</option>
+                  <option value="om">O&M Support Supervisor</option>
+                  <option value="other">Other / Internships</option>
+                </select>
+              </div>
+
+              <!-- Drag and Drop Resume Field -->
+              <div class="form-group">
+                <label class="form-label">Attach Resume / CV *</label>
+                <div class="file-upload-box flex-center" id="fileUploadBox">
+                  <input type="file" id="resumeUpload" style="display: none;" accept=".pdf,.docx" required>
+                  <div>
+                    <svg class="file-upload-icon" viewBox="0 0 24 24">
+                      <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+                    </svg>
+                    <div style="font-size: 0.9rem; font-weight: 500;" id="fileNameDisplay">
+                      Drag & drop your CV here, or click to browse
+                    </div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 5px;">
+                      Supported formats: PDF, DOCX (Max 5MB)
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Transmit CV</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Web Component Footer -->
+  <site-footer></site-footer>
+
+  <!-- Script Includes -->
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

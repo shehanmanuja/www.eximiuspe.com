@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News & Updates | Eximius Power & Energy</title>
+  <meta name="description" content="Stay updated with the latest news, project commissionings, and partnerships from Eximius Power & Energy (EPE).">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .news-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-speed);
+    }
+    .news-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0, 230, 118, 0.3);
+      box-shadow: 0 15px 40px rgba(0, 230, 118, 0.1);
+    }
+    .news-img-placeholder {
+      width: 100%;
+      height: 180px;
+      background: linear-gradient(135deg, rgba(0, 230, 118, 0.05) 0%, rgba(0, 176, 255, 0.05) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .news-img-placeholder svg {
+      width: 48px;
+      height: 48px;
+      fill: rgba(255, 255, 255, 0.15);
+    }
+    .news-content {
+      padding: 24px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .news-date {
+      font-size: 0.8rem;
+      color: var(--neon-blue);
+      margin-bottom: 10px;
+      font-family: var(--font-heading);
+    }
+    .news-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      color: var(--text-light);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .news-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+    @media (max-width: 992px) {
+      .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 576px) {
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Web Component Header -->
+  <site-header></site-header>
+
+  <main>
+    <!-- Page Banner -->
+    <div class="page-banner">
+      <div class="container">
+        <h1 class="page-banner-title">News & Updates</h1>
+        <ul class="breadcrumbs">
+          <li><a href="../index.html">Home</a></li>
+          <li>About</li>
+          <li>News & Updates</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- News Grid Section -->
+    <section class="container" style="padding: 60px 0 100px;">
+      <div style="margin-bottom: 30px;" class="reveal">
+        <div class="cyber-badge">Press Releases</div>
+        <h2>Media & Achievements</h2>
+        <p style="max-width: 700px;">
+          Track our latest grid integrations, partnership agreements, and certifications in the Sri Lankan renewable energy market.
+        </p>
+      </div>
+
+      <div class="news-grid reveal">
+        <!-- Article 1 -->
+        <div class="news-card">
+          <div class="news-img-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            <div class="cyber-badge" style="position: absolute; top: 15px; left: 15px; margin: 0;">Commissioning</div>
+          </div>
+          <div class="news-content">
+            <div class="news-date">MAY 18, 2026</div>
+            <h3 class="news-title">EPE Commissions 2.4 MW Industrial Rooftop Solar Project</h3>
+            <p class="news-desc">
+              EPE has successfully synchronized a 2.4 MW solar installation for a textile manufacturer. Utilizing Sineng SP-110K-L smart string inverters, this grid asset is estimated to offset over 2,800 tons of CO2 annually.
+            </p>
+            <a href="#" style="color: var(--neon-green); font-size: 0.8rem; font-family: var(--font-heading); font-weight: bold;">
+              Read Press Release &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="news-card">
+          <div class="news-img-placeholder">
+            <svg viewBox="0 0 24 24" style="fill: rgba(0, 176, 255, 0.15);"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+            <div class="cyber-badge cyber-badge-blue" style="position: absolute; top: 15px; left: 15px; margin: 0;">Partnerships</div>
+          </div>
+          <div class="news-content">
+            <div class="news-date">APRIL 02, 2026</div>
+            <h3 class="news-title">Eximius P&E Collaborates with Sineng to Launch Liquid Cooled Storage</h3>
+            <p class="news-desc">
+              During the annual partner meeting, EPE and Sineng announced the release of liquid-cooled battery container systems in Sri Lanka, designed to solve industrial power security issues.
+            </p>
+            <a href="#" style="color: var(--neon-blue); font-size: 0.8rem; font-family: var(--font-heading); font-weight: bold;">
+              Read Press Release &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="news-card">
+          <div class="news-img-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <div class="cyber-badge" style="position: absolute; top: 15px; left: 15px; margin: 0;">Compliance</div>
+          </div>
+          <div class="news-content">
+            <div class="news-date">MARCH 15, 2026</div>
+            <h3 class="news-title">SLSustainable Energy Authority Confirms EPE Registration</h3>
+            <p class="news-desc">
+              EPE is officially registered under class-A PV service providers with registration number SLSEA/PV/2023/108, validating our engineering standards for grid interconnectivity.
+            </p>
+            <a href="#" style="color: var(--neon-green); font-size: 0.8rem; font-family: var(--font-heading); font-weight: bold;">
+              Read Press Release &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Web Component Footer -->
+  <site-footer></site-footer>
+
+  <!-- Script Includes -->
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

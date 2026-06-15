@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>After-Sales Service & Maintenance | Eximius Power & Energy</title>
+  <meta name="description" content="Maintain your solar system yields with professional O&M, cleaning, thermal imaging, and local warranty support by EPE.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .sla-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .sla-card {
+      background: rgba(11, 22, 40, 0.4);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      padding: 30px;
+      text-align: center;
+      position: relative;
+      transition: all 0.3s;
+    }
+    .sla-card.premium {
+      border-color: var(--neon-green);
+      box-shadow: 0 0 20px rgba(0, 230, 118, 0.15);
+    }
+    .sla-card.premium::before {
+      content: 'RECOMMENDED';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gradient-primary);
+      color: var(--bg-deep);
+      font-family: var(--font-heading);
+      font-size: 0.7rem;
+      font-weight: bold;
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+    }
+    .sla-title {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .sla-price {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--neon-blue);
+      margin-bottom: 20px;
+    }
+    .sla-features {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 30px;
+      text-align: left;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .sla-features li {
+      margin-bottom: 12px;
+      display: flex;
+      gap: 10px;
+    }
+    .sla-features span {
+      color: var(--neon-green);
+      font-weight: bold;
+    }
+    @media (max-width: 992px) {
+      .sla-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Web Component Header -->
+  <site-header></site-header>
+
+  <main>
+    <!-- Page Banner -->
+    <div class="page-banner">
+      <div class="container">
+        <h1 class="page-banner-title">After-Sales & Maintenance</h1>
+        <ul class="breadcrumbs">
+          <li><a href="../index.html">Home</a></li>
+          <li>Our Services</li>
+          <li>After Sales Service & Maintenance</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Maintenance Overview -->
+    <section class="container" style="padding: 60px 0;">
+      <div class="grid-2 reveal" style="align-items: center;">
+        <div>
+          <div class="cyber-badge">Yield Optimization</div>
+          <h2>Securing Energy Yields for Decades</h2>
+          <p>
+            A solar PV system is a long-term investment designed to run for 25+ years. Dust accumulation, shading, panel degradation, or connection issues can reduce energy production. EPE’s specialized Operations & Maintenance (O&M) division provides active monitoring and onsite servicing.
+          </p>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">
+            Through our real-time cloud diagnostic networks, our control room detects inverter errors and system drops, sending field teams to inspect issues before they impact electricity savings.
+          </p>
+        </div>
+        
+        <div>
+          <div class="cyber-card">
+            <h3 style="font-size: 1.25rem; margin-bottom: 15px;">Preventive Maintenance Checklist</h3>
+            <ul style="list-style: none; padding-left: 0; display: grid; gap: 12px; font-size: 0.9rem;">
+              <li style="display: flex; gap: 10px;">
+                <span style="color: var(--neon-green); font-weight: bold;">[✓]</span>
+                <div>
+                  <strong>Pressure Panel Cleaning:</strong> Removing dust, soot, and bird droppings using pure chemical-free water to prevent cell damage.
+                </div>
+              </li>
+              <li style="display: flex; gap: 10px;">
+                <span style="color: var(--neon-green); font-weight: bold;">[✓]</span>
+                <div>
+                  <strong>Thermal Imaging Scans:</strong> Using specialized infrared cameras to identify hot-spots and micro-cracks in solar cells.
+                </div>
+              </li>
+              <li style="display: flex; gap: 10px;">
+                <span style="color: var(--neon-green); font-weight: bold;">[✓]</span>
+                <div>
+                  <strong>Electrical Grid Audits:</strong> Checking grounding systems, measuring cable insulation, and testing terminal torque parameters.
+                </div>
+              </li>
+              <li style="display: flex; gap: 10px;">
+                <span style="color: var(--neon-green); font-weight: bold;">[✓]</span>
+                <div>
+                  <strong>Inverter Firmware Updates:</strong> Running regular updates on Sineng smart inverters to optimize grid compatibility.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Warranty Framework -->
+    <section class="container" style="padding: 0 0 60px;">
+      <div style="text-align: center; margin-bottom: 50px;" class="reveal">
+        <div class="cyber-badge cyber-badge-blue">System Security</div>
+        <h2>Comprehensive Warranty Packages</h2>
+        <p style="max-width: 650px; margin: 0 auto;">
+          We back our solar installations with industry-leading warranties, supported directly by our local technical team.
+        </p>
+      </div>
+
+      <div class="grid-4 reveal">
+        <div class="metric-card">
+          <div class="metric-number" style="font-size: 2.2rem;">25 Years</div>
+          <div class="metric-title" style="font-size: 1rem;">Linear Performance</div>
+          <p style="font-size: 0.8rem; margin: 0;">Guaranteed panel output above 80%</p>
+        </div>
+        <div class="metric-card">
+          <div class="metric-number" style="font-size: 2.2rem;">5-10 Years</div>
+          <div class="metric-title" style="font-size: 1rem;">Inverter Warranty</div>
+          <p style="font-size: 0.8rem; margin: 0;">Sineng manufacturer warranty support</p>
+        </div>
+        <div class="metric-card">
+          <div class="metric-number" style="font-size: 2.2rem;">10 Years</div>
+          <div class="metric-title" style="font-size: 1rem;">Mounting Structure</div>
+          <p style="font-size: 0.8rem; margin: 0;">Anodized hot-dip structures warranty</p>
+        </div>
+        <div class="metric-card">
+          <div class="metric-number" style="font-size: 2.2rem;">3 Years</div>
+          <div class="metric-title" style="font-size: 1rem;">Workmanship</div>
+          <p style="font-size: 0.8rem; margin: 0;">Covers all EPE electrical assembly work</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLA Tiers -->
+    <section class="container" style="padding: 0 0 100px;">
+      <div style="text-align: center; margin-bottom: 30px;" class="reveal">
+        <div class="cyber-badge">Maintenance Contracts</div>
+        <h2>Service Level Agreements (SLA)</h2>
+      </div>
+
+      <div class="sla-grid reveal">
+        <!-- Bronze -->
+        <div class="sla-card">
+          <div class="sla-title">Bronze Tier</div>
+          <div class="sla-price">Residential</div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Essential maintenance for home solar units</p>
+          <ul class="sla-features">
+            <li><span>✔</span> 1 Annual Preventive Audit</li>
+            <li><span>✔</span> 2 Panel Pressure Cleanings</li>
+            <li><span>✔</span> Remote App Performance Logging</li>
+            <li><span>✔</span> 48-Hour Response for Inverter Errors</li>
+          </ul>
+          <a href="../contact.html" class="btn btn-secondary" style="width: 100%;">Select Contract</a>
+        </div>
+
+        <!-- Silver -->
+        <div class="sla-card premium">
+          <div class="sla-title">Silver Tier</div>
+          <div class="sla-price">C&I Buildings</div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Standard operations for retail & commercial entities</p>
+          <ul class="sla-features">
+            <li><span>✔</span> 2 Annual Preventive Audits</li>
+            <li><span>✔</span> 4 Panel Pressure Cleanings</li>
+            <li><span>✔</span> Infrared Thermal Scans (Annual)</li>
+            <li><span>✔</span> 24-Hour Diagnostic Response</li>
+            <li><span>✔</span> Backup Inverter Support</li>
+          </ul>
+          <a href="../contact.html" class="btn btn-primary" style="width: 100%;">Select Contract</a>
+        </div>
+
+        <!-- Gold -->
+        <div class="sla-card">
+          <div class="sla-title">Gold Tier</div>
+          <div class="sla-price">Industrial/Utility</div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Dedicated O&M for high-capacity solar fields</p>
+          <ul class="sla-features">
+            <li><span>✔</span> Monthly Preventive Audits</li>
+            <li><span>✔</span> Scheduled Mechanical Cleaning</li>
+            <li><span>✔</span> Bi-Annual Thermal Scan Analysis</li>
+            <li><span>✔</span> Real-Time API Dashboard Monitoring</li>
+            <li><span>✔</span> 4-Hour Onsite Emergency Dispatch</li>
+          </ul>
+          <a href="../contact.html" class="btn btn-secondary" style="width: 100%;">Select Contract</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Web Component Footer -->
+  <site-footer></site-footer>
+
+  <!-- Script Includes -->
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Select the Best Solar Battery Storage | Eximius P&E</title>
+  <meta name="description" content="Technical guide on battery storage systems. Learn about LiFePO4 cycle life, sizing calculations, and battery management systems.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- Web Component Header -->
+  <site-header></site-header>
+
+  <main>
+    <!-- Page Banner -->
+    <div class="page-banner">
+      <div class="container">
+        <h1 class="page-banner-title">Battery Selection Guide</h1>
+        <ul class="breadcrumbs">
+          <li><a href="../index.html">Home</a></li>
+          <li>Knowledge Bank</li>
+          <li>Battery Guide</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Article Content -->
+    <section class="container" style="padding: 60px 0; max-width: 850px;">
+      <article class="reveal">
+        <div class="cyber-badge cyber-badge-blue">Storage Science</div>
+        <h2 style="font-size: 2.2rem; line-height: 1.3; margin-bottom: 20px;">
+          How to Select the Best Suited Battery for Your Solar Power System
+        </h2>
+        <p style="font-size: 1.1rem; color: var(--text-light); line-height: 1.7; margin-bottom: 30px;">
+          Integrating battery storage into your solar system provides energy independence, allowing you to power critical operations during night cycles or utility load shedding.
+        </p>
+
+        <h3 style="color: var(--neon-blue); margin-top: 40px; margin-bottom: 15px;">1. Battery Chemistry: Why LFP is the Gold Standard</h3>
+        <p>
+          Historically, lead-acid batteries were widely used. However, modern lithium technologies have replaced them. Specifically, **Lithium Iron Phosphate (LiFePO4 or LFP)** has emerged as the leading choice for stationary energy storage:
+        </p>
+        <ul style="padding-left: 20px; margin-bottom: 25px; display: grid; gap: 12px;">
+          <li>
+            <strong>Cycle Life:</strong> Lead-acid batteries typically survive 500 to 1,500 cycles (at 50% Depth of Discharge). In contrast, high-grade LFP cells offer **6,000+ cycles** at 90% Depth of Discharge, lasting up to 15 years.
+          </li>
+          <li>
+            <strong>Safety Profile:</strong> LFP chemistry has high thermal runway thresholds, meaning it is highly resistant to overheating and does not catch fire even under damage or short circuit conditions.
+          </li>
+          <li>
+            <strong>Depth of Discharge (DoD):</strong> You can safely discharge an LFP battery to 90% of its total capacity without degradation. Lead-acid batteries should not be discharged past 50%.
+          </li>
+        </ul>
+
+        <h3 style="color: var(--neon-blue); margin-top: 40px; margin-bottom: 15px;">2. Battery Sizing Calculation</h3>
+        <p>
+          To select the appropriate battery capacity, you must calculate your critical energy consumption during outages or night hours.
+        </p>
+        
+        <div class="cyber-card" style="margin: 25px 0; border-color: rgba(0, 176, 255, 0.3); background: rgba(0, 176, 255, 0.02);">
+          <h4 style="margin-bottom: 15px; color: var(--text-light); font-family: var(--font-heading);">Capacity Sizing Formula:</h4>
+          <code style="display: block; background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.95rem; margin-bottom: 15px; border: 1px solid rgba(255,255,255,0.05); color: var(--neon-blue);">
+            Required Capacity (kWh) = (Critical Load in kW × Outage Hours) ÷ (DoD × System Efficiency)
+          </code>
+          <p style="font-size: 0.9rem; margin-bottom: 0;">
+            <strong>Example scenario:</strong> You need to run a critical load of 4 kW (computers, lighting, server room) for 4 hours of grid outage.
+            <br>
+            - Raw consumption = 4 kW × 4 hours = 16 kWh.
+            <br>
+            - Assuming a DoD of 90% (0.90) and hybrid inverter round-trip efficiency of 95% (0.95):
+            <br>
+            - Required capacity = 16 ÷ (0.90 × 0.95) = <strong>18.7 kWh</strong> of battery storage.
+          </p>
+        </div>
+
+        <h3 style="color: var(--neon-blue); margin-top: 40px; margin-bottom: 15px;">3. The Critical Role of the BMS</h3>
+        <p>
+          Every LFP battery system requires a **Battery Management System (BMS)**. The BMS serves as the brain of the battery cabinet, performing real-time diagnostics:
+        </p>
+        <ul style="padding-left: 20px; margin-bottom: 25px; display: grid; gap: 10px;">
+          <li><strong>Overcharge & Over-discharge Protection:</strong> Disconnects cells if thresholds are exceeded to prevent internal cell damage.</li>
+          <li><strong>Active Balancing:</strong> Constantly transfers energy between cells to ensure they all operate at equal voltage levels, maximizing overall performance.</li>
+          <li><strong>Thermal Regulation:</strong> Communicates with cooling fans or liquid cooling loops to adjust operating temperatures.</li>
+        </ul>
+
+        <div class="info-alert" style="margin-top: 40px;">
+          <svg class="info-alert-icon" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+          <div class="info-alert-text">
+            <strong>EPE Recommendation:</strong> For commercial and industrial facilities, we recommend integrated **Outdoor Battery Cabinets** featuring built-in liquid cooling loops, ensuring maximum safety and service longevity under peak shaving routines.
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Web Component Footer -->
+  <site-footer></site-footer>
+
+  <!-- Script Includes -->
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

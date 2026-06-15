@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Partner Authorization Letter | Eximius P&E</title>
+  <meta name="description" content="Official form to request verified partner authorization certificates from Eximius Power & Energy for import clearances or tenders.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- Web Component Header -->
+  <site-header></site-header>
+
+  <main>
+    <!-- Page Banner -->
+    <div class="page-banner">
+      <div class="container">
+        <h1 class="page-banner-title">Authorization Letter Request</h1>
+        <ul class="breadcrumbs">
+          <li><a href="../index.html">Home</a></li>
+          <li>Requests</li>
+          <li>Authorization Letter</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Request Form Section -->
+    <section class="container" style="padding: 60px 0;">
+      <div class="grid-2 reveal" style="align-items: flex-start; gap: 50px;">
+        <div>
+          <div class="cyber-badge">Compliance Division</div>
+          <h2>Partner Verification Requests</h2>
+          <p>
+            Eximius Power & Energy (EPE) issues official **Partner Authorization Letters** to verified clients, subcontractors, and tender participants. These documents confirm procurement partnerships, SLSEA compliance registration, and local warranty support.
+          </p>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">
+            If you are submitting a tender bid or importing specific Sineng hardware coordinates under our distributor channel, complete this form.
+          </p>
+          
+          <div class="info-alert" style="margin-top: 30px;">
+            <svg class="info-alert-icon" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+            <div class="info-alert-text">
+              <strong>Processing Times:</strong> Standard requests are evaluated and generated within **24 business hours**. Approved letters are issued digitally with encrypted QR codes for verification.
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="cyber-card">
+            <h3 style="margin-bottom: 25px; font-size: 1.3rem;">Verification Form</h3>
+            <!-- Connected to submitStaticForm in main.js -->
+            <form class="cyber-form" onsubmit="submitStaticForm(event, 'Your verification request has been dispatched. The EPE compliance office will contact you with the official PDF certificate shortly.')">
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="reqName">Requester Name *</label>
+                  <input type="text" id="reqName" class="form-control" placeholder="e.g. Shehan Silva" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="reqDesignation">Designation *</label>
+                  <input type="text" id="reqDesignation" class="form-control" placeholder="e.g. Procurement Lead" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="reqCompany">Company / Entity Name *</label>
+                <input type="text" id="reqCompany" class="form-control" placeholder="e.g. Solar Contractors Ltd" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="reqEmail">Official Email *</label>
+                  <input type="email" id="reqEmail" class="form-control" placeholder="name@company.com" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="reqPhone">Telephone *</label>
+                  <input type="tel" id="reqPhone" class="form-control" placeholder="+94 XX XXX XXXX" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="reqPurpose">Purpose of Letter *</label>
+                <select id="reqPurpose" class="form-control" required style="background: var(--bg-dark);">
+                  <option value="" disabled selected>Select category...</option>
+                  <option value="tender">Tender Submission</option>
+                  <option value="customs">Customs Clearance & Importation</option>
+                  <option value="audit">SLSEA Audit Reference</option>
+                  <option value="partner">Certified Installer Verification</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="reqNotes">Project / Reference Details *</label>
+                <textarea id="reqNotes" class="form-control" placeholder="Describe the tender, project capacity, and specific inverter/storage models required for authorization." required></textarea>
+              </div>
+
+              <div class="checkbox-group">
+                <input type="checkbox" id="termsConfirm" required>
+                <label for="termsConfirm" class="checkbox-custom"></label>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">
+                  I certify that all details submitted are accurate and represent official corporate requests.
+                </span>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Transmit Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Web Component Footer -->
+  <site-footer></site-footer>
+
+  <!-- Script Includes -->
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

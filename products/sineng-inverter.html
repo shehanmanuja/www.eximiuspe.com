@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sineng Solar Inverters | Eximius Power & Energy</title>
+  <meta name="description" content="Explore the complete portfolio of Sineng string and central inverters offered by EPE in Sri Lanka. Utility-scale, C&I, and residential models.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    /* Dark Theme Styles matching the website */
+    main {
+      padding-top: 90px;
+    }
+    
+    /* Brand Logo Center */
+    .sineng-brand-logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px auto 20px;
+    }
+    .sineng-brand-logo-container svg {
+      height: 48px;
+      width: auto;
+    }
+
+    /* Custom Banners */
+    .inverter-section-banner {
+      position: relative;
+      width: 100%;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+      background-position: center;
+      background-attachment: scroll;
+      margin-top: 40px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+    }
+    .inverter-section-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(3, 7, 13, 0.45) 0%, rgba(3, 7, 13, 0.85) 100%);
+      z-index: 1;
+      border-radius: var(--border-radius);
+    }
+    .banner-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #ffffff;
+      padding: 0 24px;
+    }
+    .banner-title {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: var(--neon-green);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .banner-subtitle {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+    .banner-desc {
+      font-size: 1.05rem;
+      max-width: 750px;
+      margin: 0 auto;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    /* Product Grid and Card styling */
+    .products-section {
+      padding: 60px 0;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .products-grid.grid-2-cols {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    @media (max-width: 992px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    @media (max-width: 600px) {
+      .products-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .banner-subtitle {
+        font-size: 1.7rem;
+      }
+    }
+
+    .inverter-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      padding: 24px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .inverter-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0, 230, 118, 0.3);
+      box-shadow: 0 15px 40px rgba(0, 230, 118, 0.1);
+    }
+    .inverter-img-box {
+      background: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      width: 100%;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    .inverter-img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .inverter-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-light);
+      margin-bottom: 20px;
+      margin-top: 10px;
+      min-height: 24px;
+      letter-spacing: 0.5px;
+    }
+    .inverter-btn {
+      background: var(--gradient-primary);
+      color: var(--bg-deep);
+      border: none;
+      padding: 12px 24px;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      border-radius: 4px;
+      width: 100%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      margin-top: auto;
+      box-shadow: 0 0 10px rgba(0, 230, 118, 0.25);
+    }
+    .inverter-btn:hover {
+      box-shadow: 0 0 20px rgba(0, 230, 118, 0.5), 0 0 5px rgba(0, 176, 255, 0.3);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Web Component Header -->
+  <site-header></site-header>
+
+  <main>
+    <!-- SINENG Company Brand Logo -->
+    <div class="sineng-brand-logo-container">
+      <svg viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(10, 5)">
+          <path d="M18 2 L4 10 L18 18 Z" fill="#00e676" />
+          <path d="M22 2 L36 10 L22 18 Z" fill="#00b0ff" />
+          <path d="M4 14 L18 22 L18 38 L4 30 Z" fill="#00b0ff" />
+          <path d="M36 14 L22 22 L22 38 L36 30 Z" fill="#00e676" />
+        </g>
+        <text x="60" y="34" font-family="'Outfit', 'Space Grotesk', sans-serif" font-weight="800" font-size="26" fill="var(--text-light)" letter-spacing="2">SINENG</text>
+      </svg>
+    </div>
+
+    <!-- Section 1: Utility Inverters -->
+    <div class="inverter-section-banner" style="background-image: url('../assets/images/utility-solar.png');">
+      <div class="banner-content">
+        <div class="banner-title">String Inverter</div>
+        <div class="banner-subtitle">Utility Inverter</div>
+        <p class="banner-desc">Three-phase string inverter, featuring with multi-MPPT architecture, compatible with high-power bifacial modules.</p>
+      </div>
+    </div>
+
+    <section class="container products-section">
+      <div class="products-grid grid-2-cols">
+        <!-- Card 1 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/utility_string.png" class="inverter-img" alt="SP-275K-H1">
+          </div>
+          <h3>SP-275K-H1</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="SP-275K-H1 Utility String Inverter" 
+                  data-specs='{"Nominal AC Power":"275 kW","Max. DC Input Voltage":"1500 V","Max. Efficiency":"99.02%","MPPT Number":"12","Max. Current per MPPT":"30 A","Rated Grid Voltage":"800 V","IP Class":"IP66","Cooling Method":"Smart Forced Air","Dimensions":"1100 x 780 x 380 mm","Weight":"112 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/utility_string.png" class="inverter-img" alt="SP-250K-H1">
+          </div>
+          <h3>SP-250K-H1</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="SP-250K-H1 Utility String Inverter" 
+                  data-specs='{"Nominal AC Power":"250 kW","Max. DC Input Voltage":"1500 V","Max. Efficiency":"99.00%","MPPT Number":"12","Max. Current per MPPT":"30 A","Rated Grid Voltage":"800 V","IP Class":"IP66","Cooling Method":"Smart Forced Air","Dimensions":"1100 x 780 x 380 mm","Weight":"110 kg"}'>
+            View Details
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: C&I / Residential Inverters -->
+    <div class="inverter-section-banner" style="background-image: url('../assets/images/residential-solar.png');">
+      <div class="banner-content">
+        <div class="banner-title">String Inverter</div>
+        <div class="banner-subtitle">C&I / Residential Inverter</div>
+        <p class="banner-desc">Wide range of residential & C&I string inverters for PV systems, optimizing power generation and system efficiency.</p>
+      </div>
+    </div>
+
+    <section class="container products-section">
+      <div class="products-grid">
+        <!-- Card 1 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/residential_ci.png" class="inverter-img" alt="SN3.0/3.6/4.0/5.0/6.0-LT">
+          </div>
+          <h3>SN3.0/3.6/4.0/5.0/6.0-LT</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="SN3.0-6.0-LT Residential Inverter" 
+                  data-specs='{"Nominal AC Power":"3 - 6 kW","Max. DC Input Voltage":"600 V","Max. Efficiency":"98.4%","MPPT Number":"2","Max. Current per MPPT":"15 A","Rated Grid Voltage":"230 V","IP Class":"IP65","Cooling Method":"Natural Convection","Dimensions":"380 x 320 x 150 mm","Weight":"12.5 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/residential_ci.png" class="inverter-img" alt="SN10/12/15/17/20/25-LT">
+          </div>
+          <h3>SN10/12/15/17/20/25-LT</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="SN10-25-LT Commercial Inverter" 
+                  data-specs='{"Nominal AC Power":"10 - 25 kW","Max. DC Input Voltage":"1100 V","Max. Efficiency":"98.6%","MPPT Number":"2","Max. Current per MPPT":"26 A","Rated Grid Voltage":"400 V","IP Class":"IP66","Cooling Method":"Natural Convection","Dimensions":"520 x 430 x 200 mm","Weight":"25 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/residential_ci.png" class="inverter-img" alt="SN 3.0-12PT">
+          </div>
+          <h3>SN 3.0-12PT</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="SN 3.0-12PT Inverter" 
+                  data-specs='{"Nominal AC Power":"3 - 12 kW","Max. DC Input Voltage":"1000 V","Max. Efficiency":"98.5%","MPPT Number":"2","Max. Current per MPPT":"15 A","Rated Grid Voltage":"400 V","IP Class":"IP65","Cooling Method":"Natural Convection","Dimensions":"450 x 380 x 170 mm","Weight":"18 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/residential_ci.png" class="inverter-img" alt="SN30/50PT">
+          </div>
+          <h3>SN30/50PT</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="SN30/50PT Commercial Inverter" 
+                  data-specs='{"Nominal AC Power":"30 - 50 kW","Max. DC Input Voltage":"1100 V","Max. Efficiency":"98.7%","MPPT Number":"3 / 4","Max. Current per MPPT":"30 A","Rated Grid Voltage":"400 V","IP Class":"IP66","Cooling Method":"Smart Forced Air","Dimensions":"680 x 500 x 250 mm","Weight":"42 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/residential_ci.png" class="inverter-img" alt="SP-120K-H1">
+          </div>
+          <h3>SP-120K-H1</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="SP-120K-H1 C&I Inverter" 
+                  data-specs='{"Nominal AC Power":"120 kW","Max. DC Input Voltage":"1100 V","Max. Efficiency":"98.9%","MPPT Number":"12","Max. Current per MPPT":"30 A","Rated Grid Voltage":"400 V / 415 V","IP Class":"IP66","Cooling Method":"Smart Forced Air","Dimensions":"980 x 640 x 345 mm","Weight":"88 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/residential_ci.png" class="inverter-img" alt="XN15PT">
+          </div>
+          <h3>XN15PT</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="XN15PT String Inverter" 
+                  data-specs='{"Nominal AC Power":"15 kW","Max. DC Input Voltage":"1000 V","Max. Efficiency":"98.3%","MPPT Number":"2","Max. Current per MPPT":"15 A","Rated Grid Voltage":"400 V","IP Class":"IP65","Cooling Method":"Natural Convection","Dimensions":"450 x 380 x 170 mm","Weight":"18 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/residential_ci.png" class="inverter-img" alt="SN3.0/3.6/4.0/5.0/6.0-HS">
+          </div>
+          <h3>SN3.0/3.6/4.0/5.0/6.0-HS</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="SN3.0-6.0-HS Residential Inverter" 
+                  data-specs='{"Nominal AC Power":"3 - 6 kW","Max. DC Input Voltage":"600 V","Max. Efficiency":"98.2%","MPPT Number":"2","Max. Current per MPPT":"15 A","Rated Grid Voltage":"230 V","IP Class":"IP65","Cooling Method":"Natural Convection","Dimensions":"380 x 320 x 150 mm","Weight":"12.3 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/residential_ci.png" class="inverter-img" alt="SN5.0/6.0/8.0/10/12/15-HT">
+          </div>
+          <h3>SN5.0/6.0/8.0/10/12/15-HT</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="SN5.0-15-HT Commercial Inverter" 
+                  data-specs='{"Nominal AC Power":"5 - 15 kW","Max. DC Input Voltage":"1100 V","Max. Efficiency":"98.5%","MPPT Number":"2","Max. Current per MPPT":"26 A","Rated Grid Voltage":"400 V","IP Class":"IP66","Cooling Method":"Natural Convection","Dimensions":"520 x 430 x 200 mm","Weight":"24.5 kg"}'>
+            View Details
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Central Inverters -->
+    <div class="inverter-section-banner" style="background-image: url('../assets/images/commercial-solar.png');">
+      <div class="banner-content">
+        <div class="banner-title">Central Inverter</div>
+        <div class="banner-subtitle">1500V Central Inverter</div>
+        <p class="banner-desc">High power and smart cooling, active support to grid performance, and compatible with large-scale solar project yards.</p>
+      </div>
+    </div>
+
+    <section class="container products-section">
+      <div class="products-grid">
+        <!-- Card 1 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/central.png" class="inverter-img" alt="EP-3125-HA-UD">
+          </div>
+          <h3>EP-3125-HA-UD</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="EP-3125-HA-UD Central Inverter" 
+                  data-specs='{"Nominal AC Power":"3125 kW","Max. DC Input Voltage":"1500 V","Max. Efficiency":"99.0%","IP Class":"IP55","Cooling Method":"Smart Forced Air","Dimensions":"2200 x 2300 x 950 mm","Weight":"2800 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/central.png" class="inverter-img" alt="EP-3150-HA-UD">
+          </div>
+          <h3>EP-3150-HA-UD</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="EP-3150-HA-UD Central Inverter" 
+                  data-specs='{"Nominal AC Power":"3150 kW","Max. DC Input Voltage":"1500 V","Max. Efficiency":"99.0%","IP Class":"IP55","Cooling Method":"Smart Forced Air","Dimensions":"2200 x 2300 x 950 mm","Weight":"2850 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/central.png" class="inverter-img" alt="EP-2500-HA-UD20">
+          </div>
+          <h3>EP-2500-HA-UD20</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="EP-2500-HA-UD20 Central Inverter" 
+                  data-specs='{"Nominal AC Power":"2500 kW","Max. DC Input Voltage":"1500 V","Max. Efficiency":"98.9%","IP Class":"IP55","Cooling Method":"Smart Forced Air","Dimensions":"2200 x 2300 x 950 mm","Weight":"2600 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/central.png" class="inverter-img" alt="EP-3125-HA-UD20">
+          </div>
+          <h3>EP-3125-HA-UD20</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="EP-3125-HA-UD20 Central Inverter" 
+                  data-specs='{"Nominal AC Power":"3125 kW","Max. DC Input Voltage":"1500 V","Max. Efficiency":"99.0%","IP Class":"IP55","Cooling Method":"Smart Forced Air","Dimensions":"2200 x 2300 x 950 mm","Weight":"2800 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/central.png" class="inverter-img" alt="EP-3400-HA-UD">
+          </div>
+          <h3>EP-3400-HA-UD</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="EP-3400-HA-UD Central Inverter" 
+                  data-specs='{"Nominal AC Power":"3400 kW","Max. DC Input Voltage":"1500 V","Max. Efficiency":"99.0%","IP Class":"IP55","Cooling Method":"Smart Forced Air","Dimensions":"2200 x 2300 x 950 mm","Weight":"2950 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/central.png" class="inverter-img" alt="EP-4400-HA-UD">
+          </div>
+          <h3>EP-4400-HA-UD</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="EP-4400-HA-UD Central Inverter" 
+                  data-specs='{"Nominal AC Power":"4400 kW","Max. DC Input Voltage":"1500 V","Max. Efficiency":"99.02%","IP Class":"IP55","Cooling Method":"Smart Forced Air","Dimensions":"2400 x 2300 x 1000 mm","Weight":"3200 kg"}'>
+            View Details
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Turnkey Station -->
+    <div class="inverter-section-banner" style="background-image: url('../assets/images/utility-solar.png');">
+      <div class="banner-content">
+        <div class="banner-title">Central Inverter</div>
+        <div class="banner-subtitle">1500V Turnkey Station</div>
+        <p class="banner-desc">More integrated design, turnkey solution products for easy transportation and installation in large utility applications.</p>
+      </div>
+    </div>
+
+    <section class="container products-section" style="padding-bottom: 80px;">
+      <div class="products-grid">
+        <!-- Card 1 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/turnkey.png" class="inverter-img" alt="EP-2500/3125-HA-UD10/20-25">
+          </div>
+          <h3>EP-2500/3125-HA-UD10/20-25</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="EP-2500/3125-HA-UD10/20-25 Turnkey Station" 
+                  data-specs='{"System Rated Output":"2500 - 3125 kW","AC Output Voltage":"10 kV / 20 kV / 25 kV","Integrated Inverter":"EP-2500-HA-UD / EP-3125-HA-UD","Transformer Type":"Hermetically Sealed Oil-immersed","IP Protection":"IP55 (Outdoor cabinet)","Cooling Method":"Smart forced air for inverter, Natural cooling for transformer","Dimensions":"6058 x 2438 x 2896 mm","Weight":"~15,500 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/turnkey.png" class="inverter-img" alt="EP-2500-HA-UD10-25">
+          </div>
+          <h3>EP-2500-HA-UD10-25</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="EP-2500-HA-UD10-25 Turnkey Station" 
+                  data-specs='{"System Rated Output":"2500 kW","AC Output Voltage":"10 kV - 25 kV","Integrated Inverter":"EP-2500-HA-UD","Transformer Type":"Hermetically Sealed Oil-immersed","IP Protection":"IP55","Dimensions":"6058 x 2438 x 2896 mm","Weight":"~14,800 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/turnkey.png" class="inverter-img" alt="EP-3125-HA-UD20-25">
+          </div>
+          <h3>EP-3125-HA-UD20-25</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="EP-3125-HA-UD20-25 Turnkey Station" 
+                  data-specs='{"System Rated Output":"3125 kW","AC Output Voltage":"20 kV - 25 kV","Integrated Inverter":"EP-3125-HA-UD","Transformer Type":"Hermetically Sealed Oil-immersed","IP Protection":"IP55","Dimensions":"6058 x 2438 x 2896 mm","Weight":"~15,200 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/turnkey.png" class="inverter-img" alt="EP-5000-HA-UD10-25">
+          </div>
+          <h3>EP-5000-HA-UD10-25</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="EP-5000-HA-UD10-25 Turnkey Station" 
+                  data-specs='{"System Rated Output":"5000 kW (5 MW)","AC Output Voltage":"10 kV - 25 kV","Integrated Inverter":"Dual EP-2500-HA-UD","Transformer Type":"Hermetically Sealed Oil-immersed","IP Protection":"IP55","Dimensions":"6058 x 2438 x 2896 mm","Weight":"~18,500 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/turnkey.png" class="inverter-img" alt="EP-6250-HA-UD10-25">
+          </div>
+          <h3>EP-6250-HA-UD10-25</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="EP-6250-HA-UD10-25 Turnkey Station" 
+                  data-specs='{"System Rated Output":"6250 kW (6.25 MW)","AC Output Voltage":"10 kV - 25 kV","Integrated Inverter":"Dual EP-3125-HA-UD","Transformer Type":"Hermetically Sealed Oil-immersed","IP Protection":"IP55","Dimensions":"6058 x 2438 x 2896 mm","Weight":"~19,200 kg"}'>
+            View Details
+          </button>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="inverter-card">
+          <div class="inverter-img-box">
+            <img src="../assets/images/turnkey.png" class="inverter-img" alt="EP-8800-HA-UD20-25">
+          </div>
+          <h3>EP-8800-HA-UD20-25</h3>
+          <button class="inverter-btn view-specs-btn" 
+                  data-product="EP-8800-HA-UD20-25 Turnkey Station" 
+                  data-specs='{"System Rated Output":"8800 kW (8.8 MW)","AC Output Voltage":"20 kV - 25 kV","Integrated Inverter":"Quad Inverter Setup","Transformer Type":"Oil-immersed hermetically sealed","IP Protection":"IP55","Dimensions":"12192 x 2438 x 2896 mm","Weight":"~28,000 kg"}'>
+            View Details
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reusable Modal Layout -->
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content" id="modalContent">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close Modal">
+        <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+      </button>
+      <h3 id="modalTitle" style="color:var(--neon-green); font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 10px;">Product Specifications</h3>
+      <div id="modalBody">
+        <!-- Populated via Javascript -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Web Component Footer -->
+  <site-footer></site-footer>
+
+  <!-- Script Includes -->
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

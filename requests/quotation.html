@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Solar PV & Storage Quote | Eximius P&E</title>
+  <meta name="description" content="Calculate your estimated solar system size and monthly savings using EPE's interactive calculator, then submit a formal quotation request.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- Web Component Header -->
+  <site-header></site-header>
+
+  <main>
+    <!-- Page Banner -->
+    <div class="page-banner">
+      <div class="container">
+        <h1 class="page-banner-title">Product Quotation Request</h1>
+        <ul class="breadcrumbs">
+          <li><a href="../index.html">Home</a></li>
+          <li>Requests</li>
+          <li>Product Quotation</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Interactive Calculator & Form -->
+    <section class="container" style="padding: 60px 0;">
+      <div class="grid-2 reveal" style="align-items: flex-start; gap: 50px;">
+        
+        <!-- Left: Interactive Sizing Calculator -->
+        <div>
+          <div class="cyber-badge">Dynamic Sizing</div>
+          <h2>Instant Solar Estimator</h2>
+          <p>
+            Adjust the slider below to represent your average monthly electricity bill in LKR. Our algorithm dynamically calculates your optimal solar system size, monthly financial savings, and estimated payback period in Sri Lanka.
+          </p>
+
+          <div class="cyber-card" style="margin-top: 30px; border-color: rgba(0, 176, 255, 0.25);">
+            <div class="range-slider-container">
+              <div class="slider-val-box">
+                <span class="form-label">Monthly Bill (LKR)</span>
+                <span class="slider-value" id="billVal">LKR 50,000</span>
+              </div>
+              <input type="range" id="billSlider" class="range-slider" min="10000" max="1000000" step="5000" value="50000">
+            </div>
+
+            <div class="calculator-box">
+              <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">Recommended Solar Array</div>
+              <div class="calculator-result" id="systemSizeText">-- kW</div>
+              
+              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 15px;">
+                <div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Est. Monthly Savings</div>
+                  <div id="monthlySavingsText" style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-light); font-weight: bold;">LKR 0</div>
+                </div>
+                <div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Est. Payback Period</div>
+                  <div id="paybackText" style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-light); font-weight: bold;">-- Years</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-alert" style="margin-top: 30px;">
+            <svg class="info-alert-icon" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+            <div class="info-alert-text">
+              <strong>Estimates disclaimer:</strong> Sizing projections are modeled on average solar irradiance levels in Sri Lanka (~4.2 Peak Sun Hours). Actual layout dimensions, roof tilt angles, and structural shadings require onsite physical audits by EPE engineers.
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Quotation Form -->
+        <div>
+          <div class="cyber-card">
+            <h3 style="margin-bottom: 25px; font-size: 1.3rem;">Request Formal Proposal</h3>
+            <form class="cyber-form" onsubmit="submitStaticForm(event, 'Your quotation request has been securely routed. A solar layout engineer will contact you to schedule a site audit shortly.')">
+              
+              <div class="form-group">
+                <label class="form-label" for="clientName">Full Name *</label>
+                <input type="text" id="clientName" class="form-control" placeholder="e.g. Shehan Weerasinghe" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="clientEmail">Email Coordinates *</label>
+                  <input type="email" id="clientEmail" class="form-control" placeholder="name@domain.com" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="clientPhone">Telephone Number *</label>
+                  <input type="tel" id="clientPhone" class="form-control" placeholder="+94 XX XXX XXXX" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="roofType">Roof Structure *</label>
+                  <select id="roofType" class="form-control" required style="background: var(--bg-dark);">
+                    <option value="" disabled selected>Select roof type...</option>
+                    <option value="tile">Clay / Concrete Tile</option>
+                    <option value="concrete">Concrete Flat Slab</option>
+                    <option value="metal">Metal Sheet (GI / Zinc-alum)</option>
+                    <option value="asbestos">Asbestos Corrugated Sheet</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="systemSizeInput">Calculated System Size</label>
+                  <input type="text" id="systemSizeInput" class="form-control" readonly style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.05); color: var(--neon-green);">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="siteAddress">Site Physical Address *</label>
+                <input type="text" id="siteAddress" class="form-control" placeholder="e.g. No 24, Flower Road, Colombo 07" required>
+              </div>
+
+              <div class="form-group" style="margin: 5px 0;">
+                <div class="checkbox-group">
+                  <input type="checkbox" id="batteryRequired">
+                  <label for="batteryRequired" class="checkbox-custom"></label>
+                  <span class="form-label" style="font-size: 0.9rem;">Include Energy Storage System (Battery Backup)</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="clientNotes">Special Engineering Requirements</label>
+                <textarea id="clientNotes" class="form-control" placeholder="Detail any critical loads (e.g. ACs, pumps, server cabinets) or specific installation times."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Dispatch Engineering Ticket</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Web Component Footer -->
+  <site-footer></site-footer>
+
+  <!-- Script Includes -->
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
